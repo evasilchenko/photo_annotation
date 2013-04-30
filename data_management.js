@@ -5,7 +5,10 @@ if(typeof jQuery === 'undefined') {
 
 // S.E.A.F - incapsulates our code to make sure that we don't have any problems interacting with other libraries.
 // Pass in the jQuery object because we use it for some functionality
-(function ($) {
+
+var imageAnnotate = imageAnnotate || {};
+
+imageAnnotate.DataManagement = function () {
 
   var annotations = [];
   var Annotation = function (key, title, message) {
@@ -78,4 +81,4 @@ if(typeof jQuery === 'undefined') {
                         .append('<div class="add"/>')
                         .append('<div class="remove"/>');
   });
-}(jQuery));
+};
